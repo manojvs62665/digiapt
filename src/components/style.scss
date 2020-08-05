@@ -1,0 +1,69 @@
+.nav_header {
+  h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 5px 0 0 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .navbar-brand {
+    margin-right: 30rem;
+    margin-left: 20px;
+  }
+}
+
+.home_page {
+  border: 1px solid #000000;
+  padding: 200px 100px;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  button {
+    background-color: #ff790f;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    transition: 0.1s;
+    width: 185px;
+    padding: 12px 25px;
+  }
+  button:hover {
+    background-color: #e7569c;
+  }
+}
+
+// .form-control {
+//   margin: 20px 0 10px 0 !important;
+// }
+
+.modal {
+  .modal-title {
+    margin: 0 auto;
+  }
+  .modal-header .close {
+    margin: -1rem -1rem -1rem 0;
+  }
+  .modal-dialog {
+    top: 25%;
+  }
+  .sub_btn {
+    background-color: #ff790f;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    transition: 0.1s;
+    width: 185px;
+    padding: 12px 25px;
+  }
+  .sub_btn:hover {
+    background-color: #e7569c;
+  }
+  .sub_btn:disabled {
+    cursor: not-allowed;
+  }
+  .errorMsg {
+    color: #ff0000;
+    font-size: 15px;
+  }
+}
