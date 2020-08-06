@@ -9,7 +9,9 @@ export default class Categories extends Component {
   render() {
     return (
       <>
-        <div></div>
+        <div>
+          <h2>Category 1</h2>
+        </div>
       </>
     );
   }

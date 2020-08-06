@@ -3,6 +3,19 @@ import "../style.scss";
 import { Modal, Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
 import dummyAPI from "../datastore/index";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const notify = () =>
+  toast.success("Registered successfully...!", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 
 const defaultState = {
   name: "",
@@ -87,6 +100,7 @@ export default class RegisterForm extends Component {
         .then((response) => {
           this.props.getUserData();
           this.props.onHide();
+          notify();
           console.log("newuser", response);
         })
         .catch(({ response }) => {
@@ -108,7 +122,7 @@ export default class RegisterForm extends Component {
           </Modal.Header>
           <Modal.Body>
             <Form>
-              <Row>
+              <Row className="col_one">
                 <Col>
                   <Form.Control
                     name="name"
@@ -128,7 +142,7 @@ export default class RegisterForm extends Component {
                   <p className="errorMsg">{this.state.usernameError}</p>
                 </Col>
               </Row>
-              <Row>
+              <Row className="col_one">
                 <Col>
                   <Form.Control
                     name="email"

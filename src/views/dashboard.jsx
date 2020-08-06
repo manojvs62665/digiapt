@@ -23,6 +23,7 @@ export default class Dashboard extends Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
+                <Route path="/category_1" component={Categories} />
                 <Route path="/contact" component={Contact} />
               </Switch>
             </BrowserRouter>

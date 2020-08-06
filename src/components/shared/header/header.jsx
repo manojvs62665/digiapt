@@ -23,13 +23,14 @@ export default class Header extends Component {
                 <h3 class="logo-black white">Digiapt</h3>
               </Row>
             </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">about</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
 
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="category_1">
+                  <NavDropdown.Item href="/category_1">
                     Categories1
                   </NavDropdown.Item>
                   <NavDropdown.Item href="category_2">

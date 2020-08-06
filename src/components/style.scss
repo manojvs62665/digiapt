@@ -1,44 +1,61 @@
+@import "../assets/font.scss";
+
 .nav_header {
+  background: linear-gradient(to right, #6a66e0, #3c3a86);
   h3 {
     font-size: 25px;
     font-weight: 600;
     margin: 5px 0 0 5px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: $color_white;
   }
   .navbar-brand {
     margin-right: 30rem;
     margin-left: 20px;
   }
+  .navbar-nav {
+    .nav-link {
+      color: $color_white;
+      transition: 0.6s;
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      color: $color_orange;
+    }
+  }
+}
+.navbar-light .navbar-toggler {
+  color: #ffff !important;
+  border-color: #ffff !important;
 }
 
 .home_page {
-  border: 1px solid #000000;
+  border: 2px solid $color_white;
   padding: 200px 100px;
   margin: 20px 0 0 0;
   border-radius: 10px;
   button {
-    background-color: #ff790f;
-    color: #fff;
+    background-color: $color_orange;
+    color: $color_white;
     text-align: center;
     border-radius: 5px;
     border: none;
     transition: 0.1s;
     width: 185px;
     padding: 12px 25px;
+    text-transform: uppercase;
   }
   button:hover {
-    background-color: #e7569c;
+    background-color: $color_pink;
   }
 }
 
-// .form-control {
-//   margin: 20px 0 10px 0 !important;
-// }
-
 .modal {
+  font-family: $font_family;
   .modal-title {
     margin: 0 auto;
+    text-transform: uppercase;
   }
   .modal-header .close {
     margin: -1rem -1rem -1rem 0;
@@ -47,8 +64,8 @@
     top: 25%;
   }
   .sub_btn {
-    background-color: #ff790f;
-    color: #fff;
+    background-color: $color_orange;
+    color: $color_white;
     text-align: center;
     border-radius: 5px;
     border: none;
@@ -57,13 +74,86 @@
     padding: 12px 25px;
   }
   .sub_btn:hover {
-    background-color: #e7569c;
+    background-color: $color_pink;
   }
   .sub_btn:disabled {
     cursor: not-allowed;
   }
   .errorMsg {
-    color: #ff0000;
+    color: $color_red;
     font-size: 15px;
+  }
+}
+
+.Toastify__toast--success {
+  // background: linear-gradient(to right, $color_orange, $color_pink) !important;
+  background-color: $color_orange !important;
+}
+
+@media (max-width: 600px) {
+  .nav_header {
+    padding: 10px 30px;
+    background: linear-gradient(to right, #6a66e0, #3c3a86);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    .navbar-brand {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+  main {
+    padding: 50px 0px;
+  }
+  .home_page {
+    padding: 200px 10px;
+    margin: 19% 0 !important;
+  }
+  .col_one {
+    display: block;
+  }
+  .form-control {
+    width: 95%;
+  }
+  .modal-dialog {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_header {
+    padding: 10px 30px;
+    background: linear-gradient(to right, #6a66e0, #3c3a86);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    .navbar-brand {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+  .home_page {
+    margin: 10% 0;
+  }
+  main {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav_header {
+    .navbar-brand {
+      margin-right: 20rem;
+      margin-left: 0;
+    }
+  }
+  .modal-dialog {
+    top: 11%;
   }
 }

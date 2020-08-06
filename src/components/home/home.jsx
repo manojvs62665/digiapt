@@ -3,6 +3,8 @@ import "../style.scss";
 import axios from "axios";
 import dummyAPI from "../datastore/index";
 import RegModal from "./registerForm";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default class Home extends Component {
   constructor(props) {
@@ -50,6 +52,7 @@ export default class Home extends Component {
             getUserData={this.getUserData}
           />
         </div>
+        <ToastContainer />
       </>
     );
   }

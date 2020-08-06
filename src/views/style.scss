@@ -4,4 +4,16 @@
   width: 80%;
   margin: 0 auto;
   font-family: $font_family;
+  h2 {
+    color: $color_white;
+    padding: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    h2 {
+      padding: 60px;
+    }
+  }
 }
