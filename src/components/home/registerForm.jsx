@@ -32,11 +32,6 @@ export default class RegisterForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //   id: "",
-      //   name: "",
-      //   username: "",
-      //   email: "",
-      //   phone: "",
       defaultState,
     };
   }
@@ -68,14 +63,14 @@ export default class RegisterForm extends Component {
     if (!this.state.phone) {
       phoneError = "*Please enter phone number";
     } else if (this.state.phone.length < 10 || this.state.phone.length > 10) {
-      phoneError = "*Number Must be 10 digits";
+      phoneError = "*Enter valid number";
     }
     if (!this.state.email) {
       emailError = "*Please enter email";
     } else if (!this.state.email.includes("@")) {
-      emailError = "*'@' Missing Please Check";
+      emailError = "*Enter valid email";
     } else if (!this.state.email.includes(".")) {
-      emailError = "*'.' is missing please check";
+      emailError = "*Enter valid email";
     }
     if (emailError || nameError || phoneError || usernameError) {
       this.setState({ emailError, nameError, phoneError, usernameError });
